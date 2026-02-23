@@ -2,9 +2,14 @@ def main():
 
     email = input("please type email ").strip()
 
-    if "@" in email and "." in email:
+    username, domain = email.split("@")
 
-        print("email valled, welcome ")
-    else:
-        print("non valled email, please try again ")
+    if username and domain.endswith(".ac.uk"):
+        print("domain vallid")
+
+        if "@" in email and "." in email:
+
+            print("email vallid, welcome ")
+        else:
+            print("non vallid email, please try again ")
 main()
